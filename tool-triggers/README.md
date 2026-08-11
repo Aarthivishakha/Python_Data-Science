@@ -1,8 +1,8 @@
-# Integrated tool triggers (Python 2.6 source)
+# Integrated tool triggers (Python 2.7 source)
 
 All 14 manifests analyze the real `datascience/` package, `tests/`, dependency
 files, dataset, or Git history. The application source is intentionally valid
-under both Python 2.6 and the isolated Python 3.10+ analyzer environment.
+under both Python 2.7 and the isolated Python 3.10+ analyzer environment.
 
 Triggers: Beniget, complexipy, Cosmic Ray, coverage.py, coverage+Beniget,
 CrossHair, jscpd, pip-audit, PyDriller, Pylint, pymcdc, Radon+Lizard,
