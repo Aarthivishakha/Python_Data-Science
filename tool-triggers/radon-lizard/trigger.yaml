@@ -1,6 +1,6 @@
 name: radon-lizard
 language: python
-language_version: "3.5"
+language_version: "3.6"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/**/*.py"]
 trigger:
