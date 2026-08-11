@@ -2,13 +2,19 @@
 from __future__ import with_statement
 
 import csv
+import io
 import json
+import sys
 
 
 def load_observations(path):
     """Load numeric feature/target pairs from a CSV file."""
     rows = []
-    with open(path, "rb") as stream:
+    if sys.version_info[0] < 3:
+        stream = open(path, "rb")
+    else:
+        stream = io.open(path, "r", newline="", encoding="utf-8")
+    with stream:
         reader = csv.DictReader(stream)
         for line_number, row in enumerate(reader, 2):
             try:
