@@ -1,8 +1,8 @@
-# Integrated tool triggers (Python 3.13 source)
+# Integrated tool triggers (Python 3.14 source)
 
 All 14 manifests analyze the real `datascience/` package, `tests/`, dependency
 files, dataset, or Git history. The application source is intentionally valid
-under both Python 3.13 and the isolated Python 3.13+ analyzer environment.
+under both Python 3.14 and the isolated Python 3.14+ analyzer environment.
 
 Triggers: Beniget, complexipy, Cosmic Ray, coverage.py, coverage+Beniget,
 CrossHair, jscpd, pip-audit, PyDriller, Pylint, pymcdc, Radon+Lizard,
