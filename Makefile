@@ -7,5 +7,5 @@ run:
 	python -m datascience.cli --input data/sample.csv --output reports/report.json
 
 analyze:
-	python tool-triggers/scripts/run_beniget.py datascience
-	python tool-triggers/scripts/run_pydriller.py .
+	python tool-triggers/beniget/run_beniget.py datascience
+	python tool-triggers/pydriller/run_pydriller.py .
