@@ -1,6 +1,6 @@
 name: pydriller
 language: python
-language_version: "3.10"
+language_version: "3.11"
 analysis_runtime: "Python >=3.10"
 target_files: ["Git history for datascience/"]
 trigger:
