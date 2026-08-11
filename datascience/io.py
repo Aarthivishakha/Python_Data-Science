@@ -2,13 +2,14 @@
 from __future__ import with_statement
 
 import csv
+import io
 import json
 
 
 def load_observations(path):
     """Load numeric feature/target pairs from a CSV file."""
     rows = []
-    with open(path, "rb") as stream:
+    with io.open(path, "r", newline="", encoding="utf-8") as stream:
         reader = csv.DictReader(stream)
         for line_number, row in enumerate(reader, 2):
             try:
@@ -22,6 +23,6 @@ def load_observations(path):
 
 def write_report(path, report):
     """Persist a deterministic JSON analysis report."""
-    with open(path, "w") as stream:
+    with io.open(path, "w", encoding="utf-8") as stream:
         json.dump(report, stream, indent=2, sort_keys=True)
         stream.write("\n")

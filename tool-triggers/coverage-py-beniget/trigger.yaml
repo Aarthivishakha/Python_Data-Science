@@ -1,6 +1,6 @@
 name: coverage-py-beniget
 language: python
-language_version: "2.7"
+language_version: "3.4"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/**/*.py", "tests/**/*.py"]
 trigger:

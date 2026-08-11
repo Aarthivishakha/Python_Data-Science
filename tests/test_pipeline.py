@@ -1,6 +1,7 @@
 from __future__ import with_statement
 
 import os
+import io
 import tempfile
 import unittest
 
@@ -26,7 +27,7 @@ class PipelineTest(unittest.TestCase):
         os.close(input_handle)
         os.close(output_handle)
         try:
-            with open(input_path, "w") as stream:
+            with io.open(input_path, "w", encoding="utf-8") as stream:
                 stream.write("feature,target\n1,3\n2,5\n")
             report = run(input_path, output_path)
             self.assertEqual(2, report["feature_summary"]["count"])
