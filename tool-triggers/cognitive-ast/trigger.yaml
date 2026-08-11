@@ -1,6 +1,6 @@
 name: cognitive-ast
 language: python
-language_version: "3.11"
+language_version: "3.12"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/**/*.py"]
 trigger:

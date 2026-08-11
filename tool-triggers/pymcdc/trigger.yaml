@@ -1,6 +1,6 @@
 name: pymcdc
 language: python
-language_version: "3.11"
+language_version: "3.12"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/pipeline.py", "tests/test_pipeline.py"]
 trigger:

@@ -5,8 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "python-data-science-pipeline"
 version = "1.0.0"
-description = "Reproducible CSV analysis and regression pipeline for Python 3.11"
-requires-python = ">=3.11,<3.12"
+description = "Reproducible CSV analysis and regression pipeline for Python 3.12"
+requires-python = ">=3.12,<3.13"
 
 [project.scripts]
 data-science = "datascience.cli:main"
@@ -19,7 +19,7 @@ branch = true
 source = ["datascience"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 100
 
 [tool.ruff.lint]
