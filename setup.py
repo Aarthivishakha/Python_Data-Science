@@ -4,8 +4,8 @@ from setuptools import find_packages, setup
 setup(
     name="python-data-science-pipeline",
     version="1.0.0",
-    description="CSV analysis and regression pipeline for Python 3.6",
-    python_requires=">=3.6,<3.7",
+    description="CSV analysis and regression pipeline for Python 3.7",
+    python_requires=">=3.7,<3.8",
     packages=find_packages(),
     test_suite="tests",
     entry_points={"console_scripts": ["data-science=datascience.cli:main"]},
