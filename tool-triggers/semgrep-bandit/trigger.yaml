@@ -1,6 +1,6 @@
 name: semgrep-bandit
 language: python
-language_version: "3.14"
+language_version: "3.15"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/**/*.py"]
 trigger:
