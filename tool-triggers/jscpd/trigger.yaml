@@ -1,6 +1,6 @@
 name: jscpd
 language: python
-language_version: "3.15"
+language_version: "3.16"
 analysis_runtime: "Node.js + Python >=3.10"
 target_files: ["datascience/**/*.py", "tests/**/*.py"]
 trigger:

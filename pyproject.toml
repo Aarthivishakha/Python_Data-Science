@@ -5,8 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "python-data-science-pipeline"
 version = "1.0.0"
-description = "Reproducible Data Science and regression ML pipeline for Python 3.15"
-requires-python = ">=3.15,<3.16"
+description = "Reproducible Data Science and regression ML pipeline for Python 3.16"
+requires-python = ">=3.16,<3.17"
 
 [project.scripts]
 data-science = "datascience.cli:main"
@@ -19,6 +19,7 @@ branch = true
 source = ["datascience"]
 
 [tool.ruff]
+# Ruff does not yet expose a py316 grammar target.
 target-version = "py315"
 line-length = 100
 

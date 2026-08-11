@@ -1,12 +1,30 @@
-FROM python:3.15-rc-slim
+FROM buildpack-deps:bookworm AS python-builder
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
+RUN git clone --depth 1 https://github.com/python/cpython.git /usr/src/cpython
+WORKDIR /usr/src/cpython
+RUN ./configure --prefix=/opt/python --enable-shared --with-ensurepip=install \
+    && make -j2 \
+    && make install
+
+FROM debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       ca-certificates libbz2-1.0 libffi8 libgdbm6 liblzma5 libncursesw6 \
+       libreadline8 libsqlite3-0 libssl3 tk zlib1g \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=python-builder /opt/python /opt/python
+
+ENV PATH="/opt/python/bin:$PATH" \
+    LD_LIBRARY_PATH="/opt/python/lib" \
+    PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 WORKDIR /workspace
 COPY . .
-RUN python -m pip install --no-cache-dir --upgrade pip \
-    && python -m pip install --no-cache-dir .
+RUN python3 -m pip install --no-cache-dir --upgrade pip \
+    && python3 -m pip install --no-cache-dir .
 RUN addgroup --system app && adduser --system --ingroup app app \
     && mkdir -p /workspace/reports && chown -R app:app /workspace
 USER app
