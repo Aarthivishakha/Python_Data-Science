@@ -1,0 +1,7 @@
+name: pymcdc
+language: python
+language_version: "2.6"
+analysis_runtime: "Python >=3.10"
+target_files: ["datascience/pipeline.py", "tests/test_pipeline.py"]
+trigger:
+  command: "python -m pymcdc --unittest tests/test_pipeline.py datascience/pipeline.py"

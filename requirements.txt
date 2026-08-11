@@ -1,0 +1,1 @@
+# The Python 2.6 runtime implementation uses only the standard library.

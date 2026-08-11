@@ -1,0 +1,7 @@
+name: radon-lizard
+language: python
+language_version: "2.6"
+analysis_runtime: "Python >=3.10"
+target_files: ["datascience/**/*.py"]
+trigger:
+  command: "radon cc datascience -s -a && lizard datascience"

@@ -1,0 +1,7 @@
+name: crosshair
+language: python
+language_version: "2.6"
+analysis_runtime: "Python >=3.10"
+target_files: ["datascience/statistics.py", "datascience/model.py"]
+trigger:
+  command: "crosshair check datascience.statistics datascience.model"
