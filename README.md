@@ -1,8 +1,8 @@
-# Data Science Pipeline (Python 3.4)
+# Data Science Pipeline (Python 3.5)
 
 A small, reproducible data-science project that loads CSV observations,
 computes descriptive statistics, fits a univariate least-squares model, and
-writes a JSON report. The implementation is compatible with Python 3.4 and
+writes a JSON report. The implementation is compatible with Python 3.5 and
 uses only the standard library at runtime.
 
 ```bash
@@ -12,4 +12,4 @@ python -m datascience.cli --input data/sample.csv --output reports/report.json
 
 The sample dataset, pipeline, CLI, tests, and all 14 tool-trigger manifests are
 connected to real repository files. Current analyzers run separately on Python
-3.10+; the application itself remains Python 3.4 compatible.
+3.10+; the application itself remains Python 3.5 compatible.

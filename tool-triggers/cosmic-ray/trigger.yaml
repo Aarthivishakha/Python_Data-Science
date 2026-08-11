@@ -1,6 +1,6 @@
 name: cosmic-ray
 language: python
-language_version: "3.4"
+language_version: "3.5"
 analysis_runtime: "Python >=3.10"
 target_files: ["datascience/model.py", "tests/test_pipeline.py"]
 trigger:
